@@ -1,0 +1,120 @@
+#contents {
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+}
+
+#contents::before {
+    content: "";
+    width: 1270px;
+    height: 100%;
+    background: linear-gradient(89.39deg,#2b2a4f 1.88%,#3b3b58 52.25%,rgba(39,38,63,.78) 79.19%,rgba(28,28,37,0) 96.39%);
+    top: 0;
+    display: block;
+    position: absolute;
+}
+
+#contents::after {
+    content: "";
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(174deg,rgba(25,25,27,0) 59.02%,
+              rgba(25,25,27,.36) 64.38%,rgba(25,25,28,.58) 71.31%,
+              rgba(26,26,29,.74) 80.45%,#1a1a1e 89.27%);
+}
+
+#contents .container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+#contents .container > div:nth-child(1) {
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+#contents .container > div:nth-child(1) .home {
+    width: 348px;
+    color: #fff;
+}
+
+#contents .container > div:nth-child(1) .home h2 {
+    font-size: 50px;
+}
+
+#contents .container > div:nth-child(1) .home p {
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+#contents .container > div:nth-child(2) {
+    transform: rotate(15deg);
+    padding-left: 200px;
+    position: relative;
+    height: 100%;
+    display: flex;
+}
+
+#contents .container > div:nth-child(2):before {
+    content: "";
+    background: linear-gradient(89.39deg,#3e3d57 1.88%,#262641 52.25%,rgba(39,38,63,.78) 79.19%,rgba(28,28,37,0) 96.39%);
+    top: -50px;
+    display: block;
+    position: absolute;
+    width: 1466px;
+    height: 1115px;
+    transform: rotate(-15deg);
+    left: 40px;
+}
+
+#contents .container > div:nth-child(2) .motion div {
+    width: 140px;
+    height: 140px;
+    border: 5px solid rgba(105,100,253,.5);
+    border-radius: 25px;
+    transition: all .2s;
+    margin-bottom: 40px;
+}
+
+
+
+#contents .container > div:nth-child(2) .motion div:hover {
+    transform: scale(1.2);
+}
+
+#contents .container > div:nth-child(2) .motion div a img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+
+
+/* 애니메이션 */
+#contents .container > div:nth-child(2) .loop {
+    animation: motion-slider 10s linear infinite;
+    margin-right: 35px;
+}
+
+#contents .container > div:nth-child(2) .loop-f {
+    animation: motion-slider 20s linear infinite;
+    margin-right: 35px;
+}
+
+#contents .container > div:nth-child(2) .motion:hover {
+    animation-play-state: paused;
+}
+
+@keyframes motion-slider {
+    0% {
+        transform:translateZ(0)
+    }
+    to {
+        transform:translate3d(0,-1080px,0)
+    }
+}

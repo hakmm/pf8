@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/contents.css">
+    <link rel="stylesheet" href="css/play.css">
+    <link rel="stylesheet" href="css/business.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>LDPlayer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet"> 
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("header ul.menu > li").mouseenter(function(){
+                var n = $(this).index()+1;
+                $("header ul.menu > li:nth-child("+n+") > div.sub").slideDown();
+                $(".sub").not("header ul.menu > li:nth-child("+n+") > div.sub").css("display","none");
+            });
+
+            $(".sub").mouseleave(function(){
+                $(".sub").hide();
+            });
+
+            $("#play .container-sub div.img img").hover(function(){
+                $(this).fadeIn();
+            });
+        });
+    </script>
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        $(document).ready(function(){
+            AOS.init();
+        });
+    </script>
+</head>
+<body>
+    <!-- 상단 -->
+    <header>
+        <div class="container">
+            <h1>
+                <a href="#">
+                    <img src="img/logo.webp" alt="LDPlayer">
+                </a>
+            </h1>
+            <div class="container-sub">
+                <ul class="menu">
+                    <li>
+                        <a href="#">게임센터</a>
+                        <div class="sub hide">
+                            <ul class="sub-down">
+                                <li>
+                                    <a href="">출시예정</a>
+                                </li>
+                                <li>
+                                    <a href="">롤프레잉</a>
+                                </li>
+                                <li>
+                                    <a href="">시뮬레이션</a>
+                                </li>
+                                <li>
+                                    <a href="">액션</a>
+                                </li>
+                                <li>
+                                    <a href="">케주얼 게임</a>
+                                </li>
+                                <li>
+                                    <a href="">전략</a>
+                                </li>
+                                <li>
+                                    <a href="">스포츠</a>
+                                </li>
+                                <li>
+                                    <a href="">어드벤처</a>
+                                </li>
+                                <li>
+                                    <a href="">카드</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">기술지원</a>
+                        <div class="sub hide">
+                            <ul class="sub-down">
+                                <li>
+                                    <a href="">LDPlayer9 소개</a>
+                                </li>
+                                <li>
+                                    <a href="">VT 활성화 방법</a>
+                                </li>
+                                <li>
+                                    <a href="">LDPlayer 실행 이슈</a>
+                                </li>
+                                <li>
+                                    <a href="">외장 그래픽카드 활성화 방법</a>
+                                </li>
+                                <li>
+                                    <a href="">그래픽 카드 드라이버 업데이트 방법</a>
+                                </li>
+                                <li>
+                                    <a href="">가상키 설정법</a>
+                                </li>
+                                <li>
+                                    <a href="">원키매크로 설정법</a>
+                                </li>
+                                <li>
+                                    <a href="">ADB Shell 주요 명령어 및 사용법</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">블로그</a>
+                    </li>
+                    <li>
+                        <a href="#">릴리스 노트</a>
+                    </li>
+                    <li>
+                        <a href="#">한국어</a>
+                        <div class="sub hide">
+                            <ul class="sub-down">
+                                <li>
+                                    <a href="">繁體中文</a>
+                                </li>
+                                <li>
+                                    <a href="">English</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="search">
+                    <form action="">
+                        <input type="text" placeholder="게임/블로그/가이드 검색">
+                        <button>검색</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 타이틀 -->
+    <div id="title">
+        <div class="container wrap">
+            <div class="home" data-aos="fade-right">
+                <h2>PC로 즐기는 모바일 세상</h2>
+                <p>게이밍에 관한 모든 기능을 하나로!!</p>
+                <div class="download">
+                    <a href="" class="ld-download9">download9</a>
+                    <a href="" class="ld-download5">download5</a>
+                </div>
+                <div>
+                    <a href="" class="version">각 버전 차이</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 내용 -->
+    <main>
+        <section id="contents">
+            <div class="container wrap">
+                <div>
+                    <div class="home">
+                        <h2 data-aos="fade-right">LDPlayer 이래<br>가장 획기적인 LDPlayer</h2>
+                        <p data-aos="fade-right">비약적으로 강화된 시스템,<br>획기적인 도약을 이뤄낸 성능까지!</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="motion loop">
+                        <div>
+                            <a href="#">
+                                <img src="img/contents01.webp" alt="리니지m">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents02.webp" alt="검은사막 모바일">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents03.webp" alt="블루 아카이브 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents04.webp" alt="라그나로크X : Next Generation pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents05.webp" alt="에오스 레드 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents06.webp" alt="명일방주 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents01.webp" alt="리니지m">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents02.webp" alt="검은사막 모바일">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents03.webp" alt="블루 아카이브 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents04.webp" alt="라그나로크X : Next Generation pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents05.webp" alt="에오스 레드 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents06.webp" alt="명일방주 pc">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="motion loop-f">
+                        <div>
+                            <a href="#">
+                                <img src="img/contents07.webp" alt="개판오분전 - 1004뽑기 증정 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents08.webp" alt="R2M pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents09.webp" alt="바람의나라: 연 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents10.webp" alt="신의 탑: 새로운 세계 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents11.webp" alt="미르2: 왕의 귀환 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents12.webp" alt="LOSTCITY(로스트시티) : ZERO pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents07.webp" alt="개판오분전 - 1004뽑기 증정 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents08.webp" alt="R2M pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents09.webp" alt="바람의나라: 연 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents10.webp" alt="신의 탑: 새로운 세계 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents11.webp" alt="미르2: 왕의 귀환 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents12.webp" alt="LOSTCITY(로스트시티) : ZERO pc">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="motion loop">
+                        <div>
+                            <a href="#">
+                                <img src="img/contents01.webp" alt="리니지m">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents02.webp" alt="검은사막 모바일">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents03.webp" alt="블루 아카이브 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents04.webp" alt="라그나로크X : Next Generation pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents05.webp" alt="에오스 레드 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents06.webp" alt="명일방주 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents01.webp" alt="리니지m">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents02.webp" alt="검은사막 모바일">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents03.webp" alt="블루 아카이브 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents04.webp" alt="라그나로크X : Next Generation pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents05.webp" alt="에오스 레드 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents06.webp" alt="명일방주 pc">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="motion loop-f">
+                        <div>
+                            <a href="#">
+                                <img src="img/contents07.webp" alt="개판오분전 - 1004뽑기 증정 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents08.webp" alt="R2M pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents09.webp" alt="바람의나라: 연 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents10.webp" alt="신의 탑: 새로운 세계 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents11.webp" alt="미르2: 왕의 귀환 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents12.webp" alt="LOSTCITY(로스트시티) : ZERO pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents07.webp" alt="개판오분전 - 1004뽑기 증정 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents08.webp" alt="R2M pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents09.webp" alt="바람의나라: 연 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents10.webp" alt="신의 탑: 새로운 세계 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents11.webp" alt="미르2: 왕의 귀환 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents12.webp" alt="LOSTCITY(로스트시티) : ZERO pc">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="motion loop">
+                        <div>
+                            <a href="#">
+                                <img src="img/contents01.webp" alt="리니지m">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents02.webp" alt="검은사막 모바일">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents03.webp" alt="블루 아카이브 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents04.webp" alt="라그나로크X : Next Generation pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents05.webp" alt="에오스 레드 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents06.webp" alt="명일방주 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents01.webp" alt="리니지m">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents02.webp" alt="검은사막 모바일">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents03.webp" alt="블루 아카이브 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents04.webp" alt="라그나로크X : Next Generation pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents05.webp" alt="에오스 레드 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents06.webp" alt="명일방주 pc">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="motion loop-f">
+                        <div>
+                            <a href="#">
+                                <img src="img/contents07.webp" alt="개판오분전 - 1004뽑기 증정 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents08.webp" alt="R2M pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents09.webp" alt="바람의나라: 연 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents10.webp" alt="신의 탑: 새로운 세계 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents11.webp" alt="미르2: 왕의 귀환 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents12.webp" alt="LOSTCITY(로스트시티) : ZERO pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents07.webp" alt="개판오분전 - 1004뽑기 증정 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents08.webp" alt="R2M pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents09.webp" alt="바람의나라: 연 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents10.webp" alt="신의 탑: 새로운 세계 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents11.webp" alt="미르2: 왕의 귀환 pc">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="img/contents12.webp" alt="LOSTCITY(로스트시티) : ZERO pc">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="play">
+            <div class="container wrap">
+                <div class="vi" data-aos="fade-right">
+                    <video muted autoplay loop style="width: 800px;">
+                        <source src="video/The Strongest LDPlayer9.mp4">
+                    </video>
+                </div>
+                <div class="vi-content">
+                    <h2 data-aos="fade-left">더 빨리<br>더 높이<br>더 쉽게</h2>
+                    <p data-aos="fade-left">
+                        고프레임 지원으로 가장 쉽고<br>
+                        빠르게 게임을 플레이해 보세요
+                    </p>
+                    <div data-aos="fade-up">
+                        <span>100%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="var wrap">
+                <div class="ld" data-aos="fade-left">
+                    <div class="ld-gu">
+                        <img src="img/ldplayer.png" alt="ldplayer">
+                        <img src="img/gu.png" alt="9">
+                    </div>
+                    <div class="ld-line">
+                        <div class="line-1"></div>
+                        <div class="line-2"></div>
+                    </div>
+                </div>
+                <div class="other" data-aos="fade-left">
+                    <div class="other-gu">
+                        <span>Other Players</span>
+                    </div>
+                    <div class="other-line">
+                        <div class="line-1"></div>
+                        <div class="line-2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-sub wrap">
+                <div class="img">
+                    <img src="img/play01.webp" alt="쿠키런 킹덤">
+                    <img src="img/play02.webp" alt="검은사막 모바일" data-aos="fade-up-right">
+                    <img src="img/play03.webp" alt="명일방주" data-aos="fade-down-left">
+                </div>
+                <div class="img-content">
+                    <h2  data-aos="fade-right">더 가볍게<br>그리고<br>더 강하게</h2>
+                    <p  data-aos="fade-right">
+                        CPU 및 메모리 점유율이 낮아 쾌적한<br>
+                        게임 환경을 선사합니다
+                    </p>
+                    <div data-aos="fade-up">
+                        <span>
+                            <img src="img/cpu.webp" alt="CPU">
+                        </span>
+                        <span>
+                            <img src="img/cpu-check.webp" alt="게이지">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="business">
+            <div class="container">
+                <h2>높은 신뢰를 받아온 에뮬레이터</h2>
+                <div class="container-sub">
+                    <div class="top-container">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/1.e59f85b.webp" alt="my.game">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/2.202f7e8.webp" alt="37games">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/3.3157ffc.webp" alt="lilith games">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/4.e43244f.webp" alt="funtap">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/5.a059b08.webp" alt="bilibili">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/6.7dd4787.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/7.a870883.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/8.f98fc11.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/9.757fdfb.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/10.3096ce2.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/11.7680425.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/12.09a9614.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/13.375f176.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/14.fb744ff.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/15.83b26ed.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/16.f9bfdf4.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/17.f2d2e54.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/18.ed6423e.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/1.e59f85b.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/2.202f7e8.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/3.3157ffc.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/4.e43244f.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/5.a059b08.webp" alt="">
+                    </div>
+                    <div class="bottom-container">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/19.8fb4aa0.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/20.56d8006.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/21.1a7d8d9.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/22.59fa535.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/23.700d2e3.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/24.1657c22.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/25.fa78a08.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/26.5a8dd9a.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/27.4a8ad1a.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/28.9da7a6a.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/29.aa0e88c.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/30.e982075.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/31.399d3f2.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/32.b49b57b.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/33.e0181c5.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/34.feb2a1d.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/35.c0d04b1.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/19.8fb4aa0.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/20.56d8006.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/21.1a7d8d9.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/22.59fa535.webp" alt="">
+                        <img src="https://ldcdn.ldmnq.com/gw/static/ld_gw/client/img/23.700d2e3.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- 하단 -->
+    <footer>
+        <div class="container wrap">
+            <div class="img">
+                <img src="img/logo-w.webp" style="width:200px;" alt="로고">
+            </div>
+            <div class="app">
+                <div>
+                    <h3>인기 게시글</h3>
+                    <p>
+                        <a href="">[공략] <에테르 게이저> 추천 조합(티어표/등급표) 및 게임 시스템 소개</a>
+                    </p>
+                    <p>
+                        <a href="">[공략] 에테르 게이저 게임 초기 신합리적인 체력 사용 방법</a>
+                    </p>
+                    <p>
+                        <a href="">[공략] <에테르 게이저> 리세마라 방법, 추천 캐릭터 조합, 티어표(등급표)</a>
+                    </p>
+                    <p>
+                        <a href="">[공략] 에테르 게이저를 PC에서 120프레임으로 플레이하는 방법</a>
+                    </p>
+                    <p>
+                        <a href="">[공략] 승리의 여신 니케 리세마라 티어표(등급표)</a>
+                    </p>
+                </div>
+                <div>
+                    <h3>인기 게임</h3>
+                    <p>
+                        <a href="">리니지M</a>
+                    </p>
+                    <p>
+                        <a href="">검은사막 모바일</a>
+                    </p>
+                    <p>
+                        <a href="">블루 아카이브</a>
+                    </p>
+                    <p>
+                        <a href="">라그나로크X : Next Generation</a>
+                    </p>
+                    <p>
+                        <a href="">에오스 레드</a>
+                    </p>
+                </div>
+                <div>
+                    <h3>인기 앱</h3>
+                    <p>
+                        <a href="">Chrome: 빠르고 안전한 브라우저</a>
+                    </p>
+                    <p>
+                        <a href="">원스토어</a>
+                    </p>
+                    <p>
+                        <a href="">Instagram</a>
+                    </p>
+                    <p>
+                        <a href="">카카오톡 KakaoTalk</a>
+                    </p>
+                    <p>
+                        <a href="">Facebook</a>
+                    </p>
+                </div>
+                <div>
+                    <div class="bottom-top">
+                        <h3>제휴파트너</h3>                        
+                        <p>
+                            <a href="">바로 가입</a>
+                        </p>
+                    </div>
+                    <div class="bottom-bottom">
+                        <h3>LD 제품</h3>
+                        <p>
+                            <a href="">LDCloud</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="tel">
+                <div>
+                    <h3>연락처</h3>
+                    <div>
+                        <p>
+                            <a href="">광고 문의 : fayehwang@ldplayer.net</a>
+                        </p>
+                        <p>
+                            <a href="">협업 제안 : ldplayer@naver.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h3>고객센터</h3>
+                    <a href="" class="cafe"></a>
+                    <a href="" class="talk"></a>
+                </div>
+            </div>
+            <div class="copy">
+                <p>©2022 LDPLAYER.NET , ALL RIGHTS RESERVED. XUANZHI INTERNATIONAL CO., LIMITED</p>
+                <p>
+                    <a href="">개인정보보호정책</a>
+                    <a href="">GDPR 개인정보보호정책</a>
+                    <a href="">Help Translate</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
